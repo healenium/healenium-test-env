@@ -1,0 +1,111 @@
+/* Drag and Drop Styles */
+
+.drag-container {
+    margin-bottom: 20px;
+}
+
+.draggable-item {
+    background: #57b846;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: move;
+    display: inline-block;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.draggable-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.draggable-item.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+/* Red item specific styling */
+.draggable-item.red-item {
+    background: #ff6b6b;
+}
+
+/* Green item specific styling */
+.draggable-item.green-item {
+    background: #57b846;
+}
+
+.drop-zones {
+    display: flex;
+    justify-content: center;
+}
+
+.drop-zone {
+    width: 200px;
+    height: 120px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+    font-family: Montserrat-Regular;
+    color: #666;
+}
+
+.drop-zone.drag-over {
+    border-color: #57b846;
+    background-color: #e8f5e8;
+    transform: scale(1.02);
+}
+
+.drop-zone.has-item {
+    border-color: #57b846;
+    background-color: #f0f8f0;
+}
+
+.drop-zone .dropped-item {
+    margin: 5px;
+    opacity: 1;
+}
+
+/* Success message styling */
+.drag-drop-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #57b846;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Montserrat-Regular;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .drop-zone {
+        width: 180px;
+        height: 100px;
+    }
+    
+    .draggable-item {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
