@@ -34,9 +34,13 @@ function showValidate() {
     idField.name = "return name";
 
     //CSS Id - select_item -> select_item_NewId
-    var idField = document.getElementById("select_item");
+    idField = document.getElementById("select_item");
     idField.id = "select_item_NewId";
     idField.name = "item_New";
+
+    //CSS Id - file_input -> file_input_NewId
+    idField = document.getElementById("file_input");
+    idField.id = "file_input_NewId";
 
     //CSS ClassName - test_class -> newClass
     //Find element by classname
