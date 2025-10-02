@@ -28,11 +28,14 @@
 
     <div class="healenium test fields">
         <div class="container-healenium">
-
             <span class="healenium-form-title">Healenium Test Fields</span>
             <span class="healenium-form-subtitle">All fields locators will be changed after click on button</span>
 
             <div class="healenium-form validate-form" id="main_form">
+                <div class="wrap-input1 validate-input healenium-logo">
+                    <img src="images/icons/favicon.ico" id="logo_img" alt="Healenium Logo" title="Healenium logo icon">
+                </div>
+                
                 <div class="container-healenium-form-btn">
                     <button class="healenium-form-btn" id="submit_alert" name="random_alert" onclick="hlmWait()">
                         <span>
@@ -43,45 +46,46 @@
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Name is required">
-                    <input class="input1 hlm_hover" type="text" name="Field1" id="change_id"
-                        placeholder="Change: Id and TagName">
+                    <label id="change_id_label" for="change_id">Field with hover</label>
+                    <input class="input1 hlm_hover" type="text" name="Field1" id="change_id" title="Validate change id and tag name" 
+                        placeholder="Change: Id and TagName" >
                     <span class="shadow-input1"></span>
                     <child_tag class="shadow-input1" id="change_element_last_child" />
                 </div>
 
                 <div class="wrap-input1 validate-input">
-                    <input class="test_class" type="text" name="Field2" id="change_className"
-                        placeholder="Change: ClassName">
+                    <div id="change_className_label">Field labeled by</div>
+                    <input class="test_class" type="text" name="Field2" id="change_className" aria-labelledby ="change_className_label" 
+                        placeholder="Change: ClassName" title="Validate change class name">
                     <span class="shadow-input1"></span>
                 </div>
-				
+                
                <div class="wrap-input1 validate-input">
-                    <input class="input1" type="text" name="Field3" id="validate_change_testId" data-testid="change_testId"
-                        placeholder="Change: TestId">
+                    <input class="input1" type="text" name="Field3" id="validate_testId" data-testid="change_testId"
+                        placeholder="Change: TestId" title="Validate change test id">
                     <span class="shadow-input1"></span>
-                </div>				
+                </div>              
 
                 <div class="wrap-input1 validate-input" id="descendant_change">
                     <test_tag class="shadow-input1" id="change_element"></test_tag>
-                    <input class="input1" type="text" id="change_below_element" placeholder="Change: TagName">
+                    <input class="input1" type="text" id="change_below_element" aria-label="change_tag_aria_label"
+                        placeholder="Change: TagName"  title="Validate change tag">
                 </div>
 
                 <div class="wrap-input1 validate-input">
-                    <textarea class="input1" type="text" id="change_enabled"
-                        placeholder="Change: Enabled to disabled"></textarea>
+                    <textarea class="input1" type="text" id="change_enabled" placeholder="Change: Enabled to disabled"
+                        title="Validate textarea to disabled"></textarea>
                     <span class="shadow-input1"></span>
                 </div>
 
-                <!--            checkbox disabled-->
+                <!-- checkbox disabled -->
                 <div class="wrap-input1 validate-input">
-                    <input class="input1" type="checkbox" id="change_disabled" placeholder="Change: Disabled to enabled"
-                        disabled>
+                    <input class="input1" type="checkbox" id="change_disabled" placeholder="Change: Disabled to enabled" disabled>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input">
-                    <input class="input1" type="checkbox" id="change_checked" placeholder="Change: Checked to unchecked"
-                        checked>
+                    <input class="input1" type="checkbox" id="change_checked" placeholder="Change: Checked to unchecked" checked>
                     <span class="shadow-input1"></span>
                 </div>
 

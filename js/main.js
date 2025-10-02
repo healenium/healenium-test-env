@@ -21,15 +21,48 @@ window.addEventListener("load", function (event) {
         var field = document.createElement("input");
         field.className = "input1";
         field.id = "change_wait";
+        field.placeholder = "Change: Id";
 
         div.appendChild(field);
     }, 8000);
 }, true);
 
 function showValidate() {
+    //Playwright getByRole img + getByAltText - alt
+    var idField = document.getElementById("logo_img");
+    idField.setAttribute("alt", "Changed alt");
+
+    //Playwright getByRole textbox - aria label
+    idField = document.getElementById("change_below_element");
+    idField.setAttribute("aria-label", "Changed aria-label");
+
+    //Playwright getByRole textbox - aria labelledby
+    idField = document.getElementById("change_className");
+    idField.setAttribute("aria-labelledby", "new_change_className_label");
+
+    //Playwright getByText 
+    idField = document.getElementById("drag1");
+    idField.innerText = "changed: get by text";
+
+    //Playwright getByLabel 
+    idField = document.getElementById("change_id_label");
+    idField.innerText = "Changed: Field with hover";
+
+    //Playwright getByPlaceholder 
+    idField = document.getElementById("validate_testId");
+    idField.setAttribute("placeholder", "Placeholder changed");
+
+    //Playwright getByTitle 
+    idField = document.getElementById("validate_testId");
+    idField.setAttribute("title", "Title changed");
+
+    //Playwright getByTestId 
+    idField = document.getElementById("validate_testId");
+    idField.setAttribute("data-testid", "new_validate_testId");
+
     //CSS Id - change_id -> newValue
     //Find element by Id
-    var idField = document.getElementById("change_id");
+    idField = document.getElementById("change_id");
     idField.id = "newValue";
     idField.name = "return name";
 

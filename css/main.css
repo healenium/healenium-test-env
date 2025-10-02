@@ -465,3 +465,8 @@ textarea.input1 + .shadow-input1 {
     opacity: 1;
   }
 }
+
+.healenium-logo {
+  width: 16px;
+  height: 16px;
+}
