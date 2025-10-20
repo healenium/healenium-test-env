@@ -60,6 +60,10 @@ function showValidate() {
     idField = document.getElementById("validate_testId");
     idField.setAttribute("data-testid", "new_validate_testId");
 
+    //Playwright iframe 
+    idField = document.getElementById("iframe_id");
+    idField.setAttribute("title", "New frame title");
+
     //CSS Id - change_id -> newValue
     //Find element by Id
     idField = document.getElementById("change_id");
