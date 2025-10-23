@@ -396,6 +396,9 @@ textarea.input1 + .shadow-input1 {
   .container-healenium {
     padding: 90px 15px 88px 15px;
   }
+  .frame {
+    padding: 10px 10px 10px 10px;
+  }
 }
 
 
