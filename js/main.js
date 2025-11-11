@@ -162,6 +162,10 @@ function forParentSubmit() {
 
     var ch3 = document.getElementById("form_checked3");
     ch3.className = "unchecked3";
+
+    // testid_drop1 -> newDropTestId
+    var dropZone = document.getElementById("drop1");
+    dropZone.setAttribute("data-testid", "newDropTestId");
 }
 
 function waitSubmit() {
