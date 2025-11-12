@@ -40,9 +40,17 @@ function showValidate() {
     idField = document.getElementById("change_className");
     idField.setAttribute("aria-labelledby", "new_change_className_label");
 
-    //Playwright getByText 
-    idField = document.getElementById("drag1");
-    idField.innerText = "changed: get by text";
+    //Playwright getByText - Green Item -> Changed: get by text
+    var greenElements = document.getElementsByName("dragGreen");
+    Array.from(greenElements).forEach(function(element) {
+        element.innerText = "Changed: get by text";
+    });
+
+    // Playwright DragAndDrop - dragRed -> darg2
+    var redElements = document.getElementsByName("dragRed");
+    Array.from(redElements).forEach(function(element) {
+        element.setAttribute("name", "darg2");
+    });
 
     //Playwright getByLabel 
     idField = document.getElementById("change_id_label");
@@ -163,9 +171,11 @@ function forParentSubmit() {
     var ch3 = document.getElementById("form_checked3");
     ch3.className = "unchecked3";
 
-    // testid_drop1 -> newDropTestId
+    // Playwright DragAndDrop - testid_drop1 -> newDropTestId
     var dropZone = document.getElementById("drop1");
     dropZone.setAttribute("data-testid", "newDropTestId");
+    // Playwright DragAndDrop - drop1 -> new_drop_id
+    dropZone.id = "new_drop_id";
 }
 
 function waitSubmit() {
